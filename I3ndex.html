@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Space Dodger — لعبة بسيطة</title>
+  <style>
+    :root{--bg:#0b1020;--card:#0f1724;--accent:#52e3a6;--muted:#99a0b3}
+    html,body{height:100%;margin:0;font-family:Arial,Helvetica,sans-serif;direction:rtl}
+    body{background:linear-gradient(180deg,var(--bg),#071022);display:flex;align-items:center;justify-content:center;padding:20px}
+    .wrap{width:980px;max-width:100%;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:12px;padding:18px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#e6eef8}
+    h1{font-size:20px;margin:0}
+    .meta{color:var(--muted);font-size:13px}
+    #gameCanvas{display:block;background:#020516;border-radius:8px;width:100%;height:520px}
+    .controls{display:flex;gap:10px;align-items:center;margin-top:12px}
+    button{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent);padding:8px 12px;border-radius:8px;cursor:pointer}
+    .info{color:var(--muted);font-size:13px}
+    .footer{margin-top:12px;color:var(--muted);font-size:13px}
+    /* mobile touch area */
+    .touch-controls{display:none;gap:6px}
+    @media (max-width:700px){
+      #gameCanvas{height:420px}
+      .touch-controls{display:flex}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Space Dodger — تفادي النيازك</h1>
+        <div class="meta">التحكم: ← → أو اسحب / أزرار للموبايل — الهدف: البقاء أطول مدة ممكنة</div>
+      </div>
+      <div class="meta">تمت إنشاؤها لك — جاهزة للنشر</div>
+    </header>
+
+    <canvas id="gameCanvas" width="800" height="520"></canvas>
+
+    <div class="controls">
+      <div class="info">النتيجة: <span id="score">0</span></div>
+      <button id="startBtn">ابدأ</button>
+      <button id="restartBtn" style="display:none">أعد المحاولة</button>
+      <div style="flex:1"></div>
+      <div class="touch-controls">
+        <button id="leftBtn">◀</button>
+        <button id="rightBtn">▶</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      في الأسفل تعليمات سريعة للنشر على الإنترنت (GitHub Pages أو Netlify). راجع ملف اللعبة داخل المستند.
+    </div>
+  </div>
+
+<script>
+
+</body>
+</html>
